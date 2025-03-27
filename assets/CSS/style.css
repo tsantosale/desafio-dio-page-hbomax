@@ -68,11 +68,7 @@ body {
 nav {
     width: 100%;
     padding: 20px;
-    /* desktop
-    position: fixed;
-    top:0;*/
     background: var(--nav-bg-color);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,20 +162,6 @@ header::after {
     background: var(--btn-bg-color-gradient);
     animation: wiggle 2.2s linear infinite;
 }
-/*efeito desktop
-.button-subscribe-header button {
-    background: var(--btn-bg-color-gradient);
-    outline: 3px solid transparent;
-    transition: background-position 2s, outline 2s, transform 2s;
-    background-size: 250%;
-}
-
-.button-subscribe-header button:hover {
-    background-color: transparent;
-    background-position: 100%;
-    outline: 2px solid #ff00e5;
-    transform: scale(1.05);
-}*/
 .button-subscribe-header p {
     font-size: 1.2rem;
     margin-top: 16px;
@@ -302,6 +284,171 @@ header::after {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
   }
+@media screen and (min-width: 750px){
+    nav {
+        position: fixed;
+        top:0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav button {
+        transition: background-position 1s, color 1s;
+    }
+    nav button:hover {
+        background-color: var(--btn-link-bg-color);
+        color: var(--btn-link-color);
+    }
+    header {
+        margin-top: 90px;
+    }
+    .headline-header {
+        font-size: 2.5rem;
+    }
+    .title-header-light {
+        font-size: 2.5rem;
+    }
+    .best-offer-header {
+        font-size: 2rem;
+    }
+    .price-best-offer-header {
+        font-size: 3rem;
+    }
+    .small {
+        font-size: 1.5rem;
+    }
+    .divider-header {
+        height: 7px; 
+        max-width: 800px;
+    }
+    .logo-channels-header {
+        gap: 32px;
+    }
+    header button {
+        padding: 25px 50px;
+        font-size: 1.5rem;
+    }
+    .button-subscribe-header button {
+        background: var(--btn-bg-color-gradient);
+        outline: 3px solid transparent;
+        transition: background-position 2s, outline 2s, transform 2s;
+        background-size: 250%;
+    }
+    .button-subscribe-header button:hover {
+        background-color: transparent;
+        background-position: 100%;
+        outline: 2px solid #ff00e5;
+        transform: scale(1.05);
+    }
+    .plans h3 {
+        font-size: 3rem;
+    }
+    .plans-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+    }
+    .card-plan {
+        width: 700px;
+        height: 500px;
+    }
+    .title-card-plan {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .title-card-plan h4 {
+        font-size: 2rem;
+    }
+    .title-card-plan p {
+        font-size: 2rem;
+    }
+    .plans-description li {
+        font-size: 1.8rem;
+        margin: 20px 0px;
+    }
+    .button-card-plan {
+        padding: 25px 50px;
+        font-size: 1rem;
+    }
+    .catalog h3 {
+        font-size: 3rem;
+    }
+    .catalog-cards {
+        display: flex;
+        justify-content: center;
+    }
+    .content-catalog-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin: 40px 80px;
+    } 
+    .content-catalog-card img {
+        width: 100%;
+    }
+    .content-catalog-card-img {
+        transition: transform 0.8s, background-position 0.8s, border 1s;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .content-catalog-card-img:hover {
+        transform: scale(1.05);
+        border: 2px solid var(--tertiary-color);
+        border-radius: 26px;
+    }
+    .content-catalog-card-img:hover .img-card-catalog {
+        opacity: 0;
+    }
+    .img-card-catalog {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: opacity 2s;
+    }
+    .content-catalog-card-img:nth-child(1):hover {
+        background-image: url("../images/hbo-hover_0.webp");
+    }
+    .content-catalog-card-img:nth-child(2):hover {
+        background-image: url("../images/MAX-Hover.webp");
+    } 
+    .content-catalog-card-img:nth-child(3):hover {
+        background-image: url("../images/DC-Hover.webp");
+    }
+    .content-catalog-card-img:nth-child(4):hover {
+        background-image: url("../images/WB-Hover.webp");
+    }
+    .content-catalog-card-img:nth-child(5):hover {
+        background-image: url("../images/CN-Hover.png");
+    } 
+    .content-catalog-card-img:nth-child(6):hover {
+        background-image: url("../images/UCL-Hover.webp");
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 64px;
+    }
+    .footer-links li:hover {
+        color: var(--text-color);
+    }
+    .footer-links li {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    .fotter-social-infos {
+        margin-top: 80px;
+    }
+    .fotter-social-infos img {
+        width: 100%;
+    }
+}  
 @keyframes gradient {
     0% {
       background-position: 0% 50%;
