@@ -46,11 +46,13 @@ a {
     font-style: "Quicksand", sans-serif;
 } 
 button{
-    padding: 16px 40px;
+    padding: 10px 10px;
     border-radius: 500px;
     text-transform: uppercase;
     color: var(--btn-link-bg-color);
     font-weight: 700;
+    font-size: 0.6rem;
+    font-style: "Quicksand", sans-serif;
     border: none;
     cursor: pointer;
     letter-spacing: 4px;
@@ -72,10 +74,10 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin-top: 10px;
-}
+}    
 nav img {
-    width: 160px;
+    width: 110px;
+    margin-top: 8px;
 }
 .info-menu {
     display: flex;
@@ -86,13 +88,16 @@ nav img {
 }
 nav button {
     background: #b535f6;
+    font-size: 0.6rem;
+    font-weight: 500;
 }
 .login-menu {
+    font-size: 0.8rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 4px;
 }
-.login-hbo {
+.login-hbo-form {
     max-width: 400px;
     height: 500px;
     margin: 50px auto; /* Centraliza o formulário */
@@ -102,14 +107,14 @@ nav button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 32px;
+    gap: 20px;
 }
-.login-hbo h1 {
+.login-hbo-form h1 {
     font-size: 1.5rem;
     font-style: "Quicksand";
     text-transform: uppercase;
     text-align: center;
-    margin-top: -45px;
+    margin: 0px 0px 40px 0px;
     letter-spacing: 2px;
 }
 .label-email {
@@ -130,11 +135,13 @@ nav button {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 .action-form button {
     width: 50%;
     height: 60px;
     background: linear-gradient(45deg, #9b34ef 0px, #490cb0 40px, transparent 150px);
+    font-size: 1rem;
 }
 .action-form a {
     color: var(--link-color)
@@ -162,4 +169,83 @@ nav button {
     justify-content: center;
     padding: 32px;
     gap: 32px;
+}
+@media screen and (min-width: 750px) {
+    body {
+        background: url(../images/background-movies-series.png);
+        background-size: 200% auto;
+        background-position: center;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    nav img {
+        width: 200px;
+        margin: 8px;
+    }
+    .login-menu {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 4px;
+    }
+    nav button {
+        background: #b535f6;
+        padding: 18px;
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+    .login-hbo-form {
+        max-width: 1200px;
+        height: 600px;
+    }
+    .login-hbo-form h1 {
+        font-size: 2rem;
+        letter-spacing: 4px;
+        margin-top: 30px;
+    }
+    .label-email {
+        margin: 0px 80px;
+    }
+    .input-email,
+    .input-password {
+        width: 1000px;
+        height: 80px;
+        margin: 15px 80px;
+    }
+    input::placeholder, textarea::placeholder {
+        color: var(--text-color);
+        font-size: 1rem;
+        font-family: Raleway, sans-serif;
+    }    
+    .action-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: baseline;
+        gap: 32px;
+        margin: 20px 80px;
+    }
+    .action-form button {
+        width: 220px;
+        height: 60px;
+        background: linear-gradient(45deg, #9b34ef 0px, #490cb0 40px, transparent 190px);
+        font-size: 1rem;
+    }
+    .action-form a {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 64px;
+    }
+    .footer-links li {
+        font-weight: 800;
+        font-size: 1.5rem;
+    }
 }
